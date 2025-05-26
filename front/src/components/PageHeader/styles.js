@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.header`
+  margin-bottom: 1.5rem; // 24px
+
   a {
     display: flex;
     align-items: center;
