@@ -12,7 +12,7 @@ export default styled.select`
   padding: 0 1rem; // 16px
   font-size: 1rem; // 16px
   transition: border-color 0.2s ease-in;
-  /* appearance: none; // Remove default arrow */
+  appearance: none; // dont use defualt css of OS from mobile device
 
   &:focus {
     border-color: ${({ theme }) => theme.colors.primary.main};
