@@ -7,7 +7,7 @@ class ContatsRepository {
       `SELECT contacts.*, categories.name AS category_name
       FROM contacts
       LEFT JOIN categories ON categories.id = contacts.category_id
-      ORDER BY contacts.name ${direction}`
+      ORDER BY contacts.name ${direction}`,
     );
     return row;
   }
@@ -19,7 +19,7 @@ class ContatsRepository {
     FROM contacts
     LEFT JOIN categories ON categories.id = contacts.category_id
     WHERE contacts.id = $1`,
-      [id]
+      [id],
     );
     return row;
   }
@@ -43,7 +43,7 @@ class ContatsRepository {
       VALUES ($1, $2, $3, $4)
       RETURNING *
       `,
-      [name, email, phone, category_id]
+      [name, email, phone, category_id],
     );
 
     return row;
@@ -57,7 +57,7 @@ class ContatsRepository {
       WHERE id = $5
       RETURNING *
     `,
-      [name, email, phone, category_id, id]
+      [name, email, phone, category_id, id],
     );
     return row;
   }
