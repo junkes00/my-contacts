@@ -11,6 +11,8 @@ import {
 import arrow from '../../assets/images/icons/arrow.svg';
 import edit from '../../assets/images/icons/edit.svg';
 import trash from '../../assets/images/icons/trash.svg';
+
+import Loader from '../../components/Loader';
 import delay from '../../utils/delay';
 
 export default function Home() {
@@ -53,6 +55,8 @@ export default function Home() {
 
   return (
     <Container>
+      <Loader isLoading={isLoading} />
+
       <InputSearchContainer>
         <input
           value={searchTerm}
