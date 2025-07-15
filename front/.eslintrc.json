@@ -35,6 +35,7 @@
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "error",
     "import/prefer-default-export": "off",
-    "no-promise-executor-return": "warn"
+    "no-promise-executor-return": "warn",
+    "class-methods-use-this": "off"
   }
 }

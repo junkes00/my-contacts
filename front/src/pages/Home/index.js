@@ -13,6 +13,7 @@ import edit from '../../assets/images/icons/edit.svg';
 import trash from '../../assets/images/icons/trash.svg';
 
 import Loader from '../../components/Loader';
+
 import ContactsService from '../../services/ContactsService';
 
 export default function Home() {
@@ -33,7 +34,11 @@ export default function Home() {
 
         setContacts(contactsList);
       } catch (error) {
-        console.error('Error: ', error);
+        console.info('Name:', error.name);
+        console.info('Message:', error.message);
+        console.info('Response:', error.response);
+        console.info('Body:', error.body);
+        console.info(error);
       } finally {
         setIsLoading(false);
       }

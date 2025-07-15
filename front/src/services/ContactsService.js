@@ -1,12 +1,12 @@
-import delay from '../utils/delay';
+import HttpClient from './utils/HttpClient';
 
 class ContactsService {
+  constructor() {
+    this.httpClient = new HttpClient('http://localhost:3001');
+  }
+
   async listContacts(orderBy = 'asc') {
-    const response = await fetch(`http://localhost:3001/contacts?orderBy=${orderBy}`);
-
-    await delay(500);
-
-    return response.json();
+    return this.httpClient.get(`/contacts/cc7d7148-2bb7-444b-a426-cd741c596338?orderBy=${orderBy}`);
   }
 }
 

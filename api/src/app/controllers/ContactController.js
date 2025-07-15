@@ -104,7 +104,7 @@ class ContactController {
     }
 
     await ContactsRepository.delete(id);
-    return response.status(200).json({ message: 'Contact deleted' });
+    return response.status(204);
   }
 }
 
