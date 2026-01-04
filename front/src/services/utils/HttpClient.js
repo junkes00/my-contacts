@@ -21,7 +21,7 @@ class HttpClient {
       return body;
     }
 
-    throw new APIError(response, body?.error);
+    throw new APIError(response);
   }
 }
 

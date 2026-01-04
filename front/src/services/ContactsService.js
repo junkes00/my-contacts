@@ -2,11 +2,11 @@ import HttpClient from './utils/HttpClient';
 
 class ContactsService {
   constructor() {
-    this.httpClient = new HttpClient('http://localhost:3001');
+    this.httpClient = new HttpClient('http://localhost:8080');
   }
 
   async listContacts(orderBy = 'asc') {
-    return this.httpClient.get(`/contacts/cc7d7148-2bb7-444b-a426-cd741c596338?orderBy=${orderBy}`);
+    return this.httpClient.get(`/contacts?orderBy=${orderBy}`);
   }
 }
 
