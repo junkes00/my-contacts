@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-export default styled.button`
+export const StyledButton = styled.button`
   height: 3.25rem; // 52px
   border: none;
   padding: 0 1rem;
@@ -11,6 +11,9 @@ export default styled.button`
   color: #fff;
   border-radius: 0.25rem; // 4px
   transition: background 0.2s ease-in;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &:hover {
     background: ${({ theme }) => theme.colors.primary.light};
@@ -21,7 +24,7 @@ export default styled.button`
   }
 
   &[disabled] {
-    background: #CCC;
+    background: #ccc !important;
     cursor: default;
   }
 
@@ -30,10 +33,10 @@ export default styled.button`
 
     &:hover {
     background: ${theme.colors.danger.light};
-  }
+    }
 
-  &:active {
-    background: ${theme.colors.danger.dark};
-  }
-    `}
+    &:active {
+      background: ${theme.colors.danger.dark};
+    }
+  `}
 `;
