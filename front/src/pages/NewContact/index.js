@@ -9,13 +9,8 @@ import ContactsService from '../../services/ContactsService';
 export default function NewContact() {
   const contactFormRef = useRef(null);
 
-  async function handleSubmit(formData) {
+  async function handleSubmit(contact) {
     try {
-      const contact = {
-        ...formData,
-        category_id: formData.categoryId,
-      };
-
       const response = await ContactsService.createContact(contact);
 
       contactFormRef.current.resetFields();
